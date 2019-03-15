@@ -67,7 +67,7 @@ func (be InmemBackend) Get(key []byte) ([]byte, error) {
 	return r.([]byte), nil
 }
 
-// returns deleted, error
+// Delete returns deleted, error
 func (be InmemBackend) Delete(key []byte, only_if_exists bool) (bool, error) {
 	if only_if_exists == true {
 		x, err := be.Get(key)

@@ -213,7 +213,7 @@ func (be KVBoltDBBackend) Get(key []byte) ([]byte, error) {
 
 }
 
-// returns deleted, error
+// Delete returns deleted, error
 func (be KVBoltDBBackend) Delete(key []byte, only_if_exists bool) (bool, error) {
 	if only_if_exists == true {
 		x, err := be.Get(key)
